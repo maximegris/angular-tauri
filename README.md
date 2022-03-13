@@ -58,7 +58,8 @@ npm install -g @angular/cli
 
 Voila! You can use your Angular + Tauri app in a local development environment with hot reload!
 
-The application code is managed by `src-tauri/main.rs`. In this sample, the app runs with a simple Angular App (http://localhost:4200), and a Tauri window. \
+The application code is managed by `src-tauri/main.rs`. \ 
+In this sample, the app runs with a simple Angular App (http://localhost:4200), and a webView managed by Tauri.
 
 ## Project structure
 
@@ -67,18 +68,17 @@ The application code is managed by `src-tauri/main.rs`. In this sample, the app 
 | src-tauri | Tauri main process folder (Rust)              |
 | src       | Tauri renderer process folder (Web / Angular) |
 
-
 ## Browser mode
 
-Maybe you only want to execute the application in the browser with hot reload? Just run `npm run serve`.
+Maybe you only want to execute the application in the browser with hot reload? Just run `npm run web:serve`.
 
 ## Included Commands
 
-| Command                | Description                                                                                           |
-|------------------------|-------------------------------------------------------------------------------------------------------|
-| `npm run web:serve`    | Execute the app in the web browser (DEV mode)                                                         |
-| `npm run web:prod`     | Build the app that can be used directly in the web browser. Your built files are in the /dist folder. |
-| `npm run tauri:bundle` | Builds your application and creates an app consumable based on your operating system                  |
+| Command                 | Description                                                                                           |
+|-------------------------|-------------------------------------------------------------------------------------------------------|
+| `npm run web:serve`     | Execute the app in the web browser (DEV mode)                                                         |
+| `npm run web:prod`      | Build the app that can be used directly in the web browser. Your built files are in the /dist folder. |
+| `npm run tauri:bundle`  | Builds your application and creates an app consumable based on your operating system                  |
 
 **Your application is optimised. Only /dist folder is included in the final bundle.**
 

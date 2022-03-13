@@ -68,7 +68,7 @@ jobs:
       if: matrix.platform == 'ubuntu-latest'
       uses: GabrielBB/xvfb-action@v1
       with:
-        run: npm test
+        run: npm run test
 
     - name: build tauri app
       uses: tauri-apps/tauri-action@v0
