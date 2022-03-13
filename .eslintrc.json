@@ -1,0 +1,53 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "src-tauri/**/*", // ignore nodeJs files
+    "dist/**/*",
+    "release/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "./tsconfig.serve.json",
+          "./src/tsconfig.app.json",
+          "./src/tsconfig.spec.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:@angular-eslint/ng-cli-compat",
+        "plugin:@angular-eslint/ng-cli-compat--formatting-add-on",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        "prefer-arrow/prefer-arrow-functions": 0,
+        "@angular-eslint/directive-selector":  0,
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ],
+        // in order to ignore __TAURI__
+        "no-underscore-dangle": 0,
+        "@typescript-eslint/naming-convention": 0
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "files": [
+    "app/main.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "src-tauri",
+    "**/*.spec.ts"
+  ]
+}
+
