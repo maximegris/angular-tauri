@@ -12,12 +12,12 @@
 
 # Introduction
 
-Bootstrap and package your project with Angular 13 (Typescript + SASS + Hot Reload) and Tauri (Rust) for creating Desktop applications.
+Bootstrap and package your project with Angular 14 (Typescript + SASS + Hot Reload) and Tauri (Rust) for creating Desktop applications.
 
 Currently runs with:
 
-- Angular v13.2.4
-- Tauri 1.0.0-rc.2
+- Angular v14.2.0
+- Tauri 1.0.5
 
 With this sample, you can:
 
