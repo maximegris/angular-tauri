@@ -16,7 +16,7 @@ Bootstrap and package your project with Angular 14 (Typescript + SASS + Hot Relo
 
 Currently runs with:
 
-- Angular v14.2.0
+- Angular v15.2.0
 - Tauri 1.0.5
 
 With this sample, you can:
@@ -83,8 +83,6 @@ Maybe you only want to execute the application in the browser with hot reload? J
 **Your application is optimised. Only /dist folder is included in the final bundle.**
 
 ## Branch & Packages version
-
-- Angular 13 & Tauri 1.RC : (main)
 
 [maintained-badge]: https://img.shields.io/badge/maintained-yes-brightgreen
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg
