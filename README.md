@@ -52,6 +52,12 @@ Please follow [Angular-cli documentation](https://github.com/angular/angular-cli
 npm install -g @angular/cli
 ```
 
+Older @angular/cli references may grab angular version 15. To update to angular version 16 specifically for the global cli run:
+
+``` bash
+npm install -g @angular/cli@^16
+```
+
 ## To build for development
 
 - **in a terminal window** -> npm start
