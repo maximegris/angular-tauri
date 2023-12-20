@@ -25,7 +25,7 @@ With this sample, you can:
 - Run your app in a production environment
 - Package your app into an executable file for Linux, Windows & Mac
 
-/!\ Angular CLI needs Node 14 or later to work correctly.
+/!\ Angular CLI needs Node 16 or later to work correctly.
 
 ## Getting Started
 
