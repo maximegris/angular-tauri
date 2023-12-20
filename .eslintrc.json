@@ -25,7 +25,7 @@
       ],
       "rules": {
         "prefer-arrow/prefer-arrow-functions": 0,
-        "@angular-eslint/directive-selector":  0,
+        "@angular-eslint/directive-selector": 0,
         "@angular-eslint/component-selector": [
           "error",
           {
@@ -46,8 +46,7 @@
       "extends": [
         "plugin:@angular-eslint/template/recommended"
       ],
-      "rules": {
-      }
+      "rules": {}
     }
   ]
 }
