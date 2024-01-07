@@ -12,12 +12,12 @@
 
 # Introduction
 
-Bootstrap and package your project with Angular 14 (Typescript + SASS + Hot Reload) and Tauri (Rust) for creating Desktop applications.
+Bootstrap and package your project with Angular 16 (Typescript + SASS + Hot Reload) and Tauri (Rust) for creating Desktop applications.
 
 Currently runs with:
 
-- Angular v15.2.0
-- Tauri 1.0.5
+- Angular v16.2.12
+- Tauri 1.5.3
 
 With this sample, you can:
 
@@ -25,7 +25,7 @@ With this sample, you can:
 - Run your app in a production environment
 - Package your app into an executable file for Linux, Windows & Mac
 
-/!\ Angular CLI needs Node 14 or later to work correctly.
+/!\ Angular CLI needs Node 16 or later to work correctly.
 
 ## Getting Started
 
@@ -50,6 +50,12 @@ Please follow [Angular-cli documentation](https://github.com/angular/angular-cli
 
 ``` bash
 npm install -g @angular/cli
+```
+
+Older @angular/cli references may grab angular version 15. To update to angular version 16 specifically for the global cli run:
+
+``` bash
+npm install -g @angular/cli@^16
 ```
 
 ## To build for development
