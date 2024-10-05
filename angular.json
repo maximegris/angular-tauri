@@ -75,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-tauri:build:production"
+              "buildTarget": "angular-tauri:build:production"
             },
             "development": {
-              "browserTarget": "angular-tauri:build:development"
+              "buildTarget": "angular-tauri:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-tauri:build"
+            "buildTarget": "angular-tauri:build"
           }
         },
         "test": {

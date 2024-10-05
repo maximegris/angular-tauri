@@ -1,4 +1,6 @@
 /* SystemJS module definition */
 interface Window {
-  __TAURI__: any;
+  __TAURI__: {
+    convertFileSrc: (src: string, protocol: string) => string;
+  };
 }
