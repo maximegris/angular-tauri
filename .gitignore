@@ -44,7 +44,9 @@ testem.log
 .DS_Store
 Thumbs.db
 
+package-lock.json
 
 # Tauri
 src-tauri/target
 src-tauri/WixTools
+src-tauri/gen
