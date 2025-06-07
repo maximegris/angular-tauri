@@ -3,7 +3,8 @@
   "ignorePatterns": [
     "src-tauri/**/*", // ignore nodeJs files
     "dist/**/*",
-    "release/**/*"
+    "release/**/*",
+	"src/environments/*.ts"
   ],
   "overrides": [
     {
@@ -19,8 +20,7 @@
         "createDefaultProgram": true
       },
       "extends": [
-        "plugin:@angular-eslint/ng-cli-compat",
-        "plugin:@angular-eslint/ng-cli-compat--formatting-add-on",
+        "plugin:@angular-eslint/recommended",
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {

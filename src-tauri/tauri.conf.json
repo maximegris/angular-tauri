@@ -1,69 +1,57 @@
 {
-  "package": {
-    "productName": "angular-tauri",
-    "version": "1.0.0"
-  },
-  "build": {
-    "distDir": "../dist",
-    "devPath": "http://localhost:4200",
-    "beforeDevCommand": "npm run web:serve",
-    "beforeBuildCommand": "npm run web:prod"
-  },
-  "tauri": {
-    "bundle": {
-      "active": true,
-      "targets": "all",
-      "identifier": "com.angular.tauri.dev",
-      "icon": [
-        "icons/32x32.png",
-        "icons/128x128.png",
-        "icons/128x128@2x.png",
-        "icons/icon.icns",
-        "icons/icon.ico"
-      ],
-      "resources": [],
-      "externalBin": [],
-      "copyright": "",
-      "category": "DeveloperTool",
-      "shortDescription": "",
-      "longDescription": "",
-      "deb": {
-        "depends": []
-      },
-      "macOS": {
-        "frameworks": [],
-        "minimumSystemVersion": "",
-        "exceptionDomain": "",
-        "signingIdentity": null,
-        "providerShortName": null,
-        "entitlements": null
-      },
-      "windows": {
-        "certificateThumbprint": null,
-        "digestAlgorithm": "sha256",
-        "timestampUrl": ""
-      }
-    },
-    "updater": {
-      "active": false
-    },
-    "allowlist": {
-      "all": true
-    },
-    "windows": [
-      {
-        "title": "Angular Tauri",
-        "width": 800,
-        "height": 600,
-        "resizable": true,
-        "fullscreen": false
-      }
-    ],
-    "security": {
-      "csp": null
-    },
-    "pattern": {
-      "use": "brownfield"
-    }
-  }
+	"$schema": "https://schema.tauri.app/config/2.0.0",
+	"productName": "angular-tauri",
+	"version": "1.0.0",
+	"identifier": "com.angular.tauri.dev",
+	"build": {
+		"frontendDist": "../dist",
+		"devUrl": "http://localhost:4200",
+		"beforeDevCommand": "npm run web:serve",
+		"beforeBuildCommand": "npm run web:prod"
+	},
+	"app": {
+		"withGlobalTauri": true,
+		"windows": [
+			{
+				"title": "Angular Tauri",
+				"width": 800,
+				"height": 600,
+				"resizable": true,
+				"fullscreen": false
+			}
+		],
+		"security": {
+			"csp": null
+		}
+	},
+	"bundle": {
+		"active": true,
+		"targets": "all",
+		"icon": [
+			"icons/32x32.png",
+			"icons/128x128.png",
+			"icons/128x128@2x.png",
+			"icons/icon.icns",
+			"icons/icon.ico"
+		],
+		"resources": [],
+		"externalBin": [],
+		"copyright": "",
+		"category": "DeveloperTool",
+		"shortDescription": "",
+		"longDescription": "",
+		"macOS": {
+			"frameworks": [],
+			"minimumSystemVersion": "",
+			"exceptionDomain": "",
+			"signingIdentity": null,
+			"providerShortName": null,
+			"entitlements": null
+		},
+		"windows": {
+			"certificateThumbprint": null,
+			"digestAlgorithm": "sha256",
+			"timestampUrl": ""
+		}
+	}
 }
