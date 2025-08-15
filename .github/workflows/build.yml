@@ -62,7 +62,7 @@ jobs:
             libwebkit2gtk-4.1-dev
 
       - name: Install Node dependencies
-        run: npm ci
+        run: npm install
 
       - name: Check lint
         run: npm run lint
