@@ -8,13 +8,13 @@ describe('DetailComponent', () => {
   let component: DetailComponent;
   let fixture: ComponentFixture<DetailComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async() => {
+    await TestBed.configureTestingModule({
       declarations: [],
       imports: [DetailComponent, TranslateModule.forRoot()],
       providers: [provideRouter([])]
     }).compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(DetailComponent);
@@ -26,10 +26,10 @@ describe('DetailComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should render title in a h1 tag', waitForAsync(() => {
+  it('should render title in a h1 tag', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain(
       'PAGES.DETAIL.TITLE'
     );
-  }));
+  });
 });

@@ -5,17 +5,17 @@ import {TauriService} from './core/services';
 import {provideRouter} from '@angular/router';
 
 describe('AppComponent', () => {
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async() => {
+    await TestBed.configureTestingModule({
       declarations: [],
       imports: [AppComponent, TranslateModule.forRoot()],
       providers: [provideRouter([]), TauriService]
     }).compileComponents();
-  }));
+  });
 
-  it('should create the app', waitForAsync(() => {
+  it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  }));
+  });
 });

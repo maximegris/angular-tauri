@@ -6,9 +6,9 @@
 /out-tsc
 /app-builds
 /release
+/test-results
 main.js
 src/**/*.js
-!src/karma.conf.js
 *.js.map
 
 # dependencies

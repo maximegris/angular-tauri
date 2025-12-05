@@ -8,8 +8,7 @@
     ]
   },
   "files": [
-    "main.ts",
-    "polyfills.ts"
+    "main.ts"
   ],
   "include": [
     "**/*.ts",
