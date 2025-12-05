@@ -1,7 +1,7 @@
 import { TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TauriService } from './core/services';
 
 describe('AppComponent', () => {
@@ -9,7 +9,7 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       declarations: [AppComponent],
       providers: [TauriService],
-      imports: [RouterTestingModule, TranslateModule.forRoot()]
+      imports: [RouterTestingModule, TranslateModule.forRoot()],
     }).compileComponents();
   }));
 
