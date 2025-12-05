@@ -65,5 +65,8 @@
     "typescript": "5.9.3",
     "wait-on": "9.0.3",
     "webdriver-manager": "13.0.2"
+  },
+  "engines": {
+    "node": ">= 22.12.0 || >= 24.0.0"
   }
 }

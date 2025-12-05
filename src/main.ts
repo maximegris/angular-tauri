@@ -1,13 +1,57 @@
-import { enableProdMode, provideZoneChangeDetection } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import {enableProdMode, provideZoneChangeDetection} from '@angular/core';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { importProvidersFrom } from '@angular/core';
+import { provideRouter } from '@angular/router';
 
-import { AppModule } from './app/app.module';
+import { AppComponent } from './app/app.component';
 import { APP_CONFIG } from './environments/environment';
+import { CoreModule } from './app/core/core.module';
+import { SharedModule } from './app/shared/shared.module';
+import {provideTranslateService} from '@ngx-translate/core';
+import {provideTranslateHttpLoader} from '@ngx-translate/http-loader';
+import { PageNotFoundComponent } from './app/shared/components';
+import { HomeComponent } from './app/home/home.component';
+import { DetailComponent } from './app/detail/detail.component';
 
 if (APP_CONFIG.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic()
-  .bootstrapModule(AppModule, { applicationProviders: [provideZoneChangeDetection()], preserveWhitespaces: false,})
-  .catch(err => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideZoneChangeDetection(),
+    provideHttpClient(withInterceptorsFromDi()),
+    provideTranslateService({
+      loader: provideTranslateHttpLoader({
+        prefix: './assets/i18n/',
+        suffix: '.json'
+      }),
+      fallbackLang: 'en',
+      lang: 'en'
+    }),
+    provideRouter([
+      {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full'
+      },
+      {
+        path: 'home',
+        component: HomeComponent
+      },
+      {
+        path: 'detail',
+        component: DetailComponent
+      },
+      {
+        path: '**',
+        component: PageNotFoundComponent
+      }
+    ]),
+    importProvidersFrom(
+      CoreModule,
+      SharedModule
+    )
+  ]
+}).catch(err => console.error(err));
