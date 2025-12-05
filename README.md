@@ -12,12 +12,12 @@
 
 # Introduction
 
-Bootstrap and package your project with Angular 19 (Typescript + SASS + Hot Reload) and Tauri (Rust) for creating Desktop applications.
+Bootstrap and package your project with Angular 21 (Typescript + SASS + Hot Reload) and Tauri (Rust) for creating Desktop applications.
 
 Currently runs with:
 
-- Angular v19.2.14
-- Tauri 2.0.0
+- Angular v21.0.3
+- Tauri 2.1.1
 
 With this sample, you can:
 
@@ -52,10 +52,10 @@ Please follow [Angular-cli documentation](https://github.com/angular/angular-cli
 npm install -g @angular/cli
 ```
 
-Older @angular/cli references may grab angular version 18. To update to angular version 19 specifically for the global cli run:
+Older @angular/cli references may grab angular version 18. To update to angular version 21 specifically for the global cli run:
 
 ``` bash
-npm install -g @angular/cli@^19
+npm install -g @angular/cli@^21
 ```
 
 ## To build for development
