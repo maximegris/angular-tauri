@@ -49,6 +49,18 @@ jobs:
           # Only required targets will be downloaded depending on platform
           targets: ${{ matrix.platform == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || '' }}
 
+      # ----------------------------
+      #        MACOS ONLY FIX
+      # ----------------------------
+      - name: Install macOS dependencies
+        if: matrix.platform == 'macos-latest'
+        run: |
+          brew install gnu-tar coreutils
+          echo "Homebrew dependencies installed"
+
+      # ----------------------------
+      #        UBUNTU ONLY
+      # ----------------------------
       - name: Install dependencies (Linux only)
         if: matrix.platform == 'ubuntu-22.04'
         run: |
@@ -73,6 +85,9 @@ jobs:
         with:
           run: npm run test
 
+      # ----------------------------
+      #        BUILD TAURI
+      # ----------------------------
       - name: Build Tauri app
         uses: tauri-apps/tauri-action@v0
         env:
