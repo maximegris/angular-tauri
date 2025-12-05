@@ -1,19 +1,20 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { APP_CONFIG } from '../environments/environment';
-import {TauriService} from './core/services';
+import { TauriService } from './core/services';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  standalone: false,
 })
 export class AppComponent {
   constructor(
     private tauriService: TauriService,
     private translate: TranslateService
   ) {
-    this.translate.setDefaultLang('en');
+    translate.setFallbackLang('en');
     console.log('APP_CONFIG', APP_CONFIG);
 
     if (this.tauriService.isTauri) {
