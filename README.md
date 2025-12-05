@@ -37,7 +37,7 @@ git clone https://github.com/maximegris/angular-tauri.git
 
 *Install Tauri (Rust)*
 
-https://tauri.studio/docs/getting-started/prerequisites
+https://v2.tauri.app/start/prerequisites
 
 *Install dependencies with npm:*
 
