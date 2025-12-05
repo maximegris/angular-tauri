@@ -4,7 +4,7 @@
     "src-tauri/**/*", // ignore nodeJs files
     "dist/**/*",
     "release/**/*",
-	"src/environments/*.ts"
+	  "src/environments/*.ts"
   ],
   "overrides": [
     {
