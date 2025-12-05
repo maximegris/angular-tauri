@@ -15,6 +15,10 @@
     "**/*.d.ts"
   ],
   "exclude": [
-    "**/*.spec.ts"
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "**/vitest.d.ts",
+    "**/vitest.config.*",
+    "**/test-setup.ts"
   ]
 }
