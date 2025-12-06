@@ -79,11 +79,14 @@ jobs:
       - name: Check lint
         run: npm run lint
 
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
       - name: Run unit tests (Linux only)
         if: matrix.platform == 'ubuntu-22.04'
         uses: GabrielBB/xvfb-action@v1
         with:
-          run: npm run test
+          run: npm run test -- --reporters=default
 
       # ----------------------------
       #        BUILD TAURI
